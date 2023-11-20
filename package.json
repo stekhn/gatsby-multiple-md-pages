@@ -1,0 +1,28 @@
+{
+  "name": "gatsby-starter-minimal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Example to reproduce a problem with building multiple page categories from markdown",
+  "author": "Steffen Kühne",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "license": "0BSD",
+  "dependencies": {
+    "gatsby": "^5.12.4",
+    "gatsby-source-filesystem": "^5.12.1",
+    "gatsby-transformer-remark": "^6.12.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.2",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "typescript": "^5.3.2"
+  }
+}
