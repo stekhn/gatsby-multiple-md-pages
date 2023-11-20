@@ -2,9 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { Markdown, Page } from "../../types/markdown";
 
-export const ProjectPage: React.FC<{ data: Markdown<Page> }> = ({
-  data,
-}) => {
+export const ProjectPage: React.FC<{ data: Markdown<Page> }> = ({ data }) => {
   const { project } = data;
   const { frontmatter, html } = project;
   const { slug, title, category } = frontmatter;
@@ -27,7 +25,10 @@ export const ProjectPage: React.FC<{ data: Markdown<Page> }> = ({
 
 export const pageQuery = graphql`
   query ($id: String!) {
-    project: markdownRemark(id: { eq: $id }, fileAbsolutePath: { regex: "/projects/" }) {
+    project: markdownRemark(
+      id: { eq: $id }
+      fileAbsolutePath: { regex: "/projects/" }
+    ) {
       html
       frontmatter {
         slug
